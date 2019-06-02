@@ -54,7 +54,8 @@ h1 {
 	padding: 10px 30px;
 	font-weight: 300;
 	text-decoration: none; /* Borrar el formato predefinido */
-	border-radius: 10px;
+    border-radius: 10px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
 .btn-full {
@@ -66,4 +67,44 @@ h1 {
 .btn-ghost {
 	border: 1px solid #c0392b;
 	color: #fff;
+}
+
+.btn:hover,
+.btn:active {
+	background-color: #9c2d21;
+}
+
+.btn-full:hover,
+.btn-full:active {
+	border: 1px solid #9c2d21;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+	border: 1px solic #9c2d21;
+}
+
+.logo {
+	height: 130px;
+	width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+	display: inline-block;
+	Margin-left: 40px;
+}
+
+.main-nav li a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%;
 }
