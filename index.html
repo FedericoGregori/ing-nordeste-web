@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="vendors/css/normalize.css" />
         <link rel="stylesheet" href="resources/css/style.css" />
         <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+            rel="stylesheet"
+        />
+        <link
             href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap"
             rel="stylesheet"
         />
@@ -21,6 +25,9 @@
             href="resources/img/logo.png"
             type="image/x-icon"
         />
+
+        <script src="vendors/js/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     </head>
     <body>
         <header>
@@ -39,12 +46,52 @@
                     </ul>
                 </div>
             </nav>
-            <div class="hero-text-box">
-                <h1>Soluciones integrales</h1>
-                <a class="btn btn-full" href="#">Trabajos</a>
-                <a class="btn btn-ghost" href="#">Contacto</a>
-            </div>
         </header>
+
+        <!-- Slider -->
+
+        <section class="hero-slider">
+            <div class="hero-slide slider_1">
+                <div class="slider-overlay slider-1-overlay"></div>
+                <div class="container">
+                    <div class="slide-content text-white text-white">
+                        <h2 class="h1 text-white">
+                            Soluciones Integrales de Ingeniería
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide slider_2">
+                <div class="slider-overlay slider-2-overlay"></div>
+                <div class="container">
+                    <div class="slide-content text-white">
+                        <h2 class="h1 text-white">
+                            Obras Eléctricas
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide slider_3">
+                <div class="slider-overlay slider-3-overlay"></div>
+                <div class="container">
+                    <div class="slide-content text-white">
+                        <h2 class="h1 text-white">
+                            Obras Civíles
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide slider_4">
+                <div class="slider-overlay slider-4-overlay"></div>
+                <div class="container">
+                    <div class="slide-content text-white">
+                        <h2 class="h1 text-white">
+                            Aires Acondicionados
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Nosotros -->
 
@@ -99,52 +146,38 @@
             </div>
             <div class="row">
                 <div class="col span-1-of-5 box">
-                    <i class="icon ion-md-thunderstorm icon-big"></i>
-                    <h3>Obras Eléctricas</h3>
-                    <p>
-                        Proyectos eléctricos integrales para edificios,
-                        industrias y hogares.
-                    </p>
+                    <a href="#">
+                        <i class="icon ion-md-thunderstorm icon-big"></i>
+                        <h3>Obras Eléctricas</h3>
+                    </a>
                 </div>
                 <div class="col span-1-of-5 box">
-                    <i class="icon ion-md-person icon-big"></i>
-                    <h3>Obras Civíles</h3>
-                    <p>
-                        Automatizacion de todos los ambientes de las casas o
-                        departamentos. Sistema inteligente IHAUS.
-                    </p>
+                    <a href="#">
+                        <i class="icon ion-md-person icon-big"></i>
+                        <h3>Obras Civíles</h3>
+                    </a>
                 </div>
                 <div class="col span-1-of-5 box">
-                    <i class="icon ion-md-flashlight icon-big"></i>
-                    <h3>Energías Renovables: "Calefones Solares"</h3>
-                    <p>
-                        Elaboración de proyecto y dirección de obras
-                        electromecánicas. Mediciones eléctricas
-                    </p>
+                    <a href="#">
+                        <i class="icon ion-md-flashlight icon-big"></i>
+                        <h3>Energías Renovables: "Calefones Solares"</h3>
+                    </a>
                 </div>
                 <div class="col span-1-of-5 box">
-                    <i class="icon ion-ios-hammer icon-big"></i>
-                    <h3>
-                        Muebles
-                    </h3>
-                    <p>
-                        Planos y cálculos eléctricos . Diagramas unifilares de
-                        industrias, edificios y viviendas. Diseño de
-                        topográficos, armado y montaje de tableros eléctricos.
-                        Auditorías energéticas Mejoras de instalaciones.
-                    </p>
+                    <a href="#"
+                        ><i class="icon ion-ios-hammer icon-big"></i>
+                        <h3>
+                            Muebles
+                        </h3>
+                    </a>
                 </div>
                 <div class="col span-1-of-5 box">
-                    <i class="icon ion-md-aperture icon-big"></i>
-                    <h3>
-                        Aires Acondicionados
-                    </h3>
-                    <p>
-                        Planos y cálculos eléctricos . Diagramas unifilares de
-                        industrias, edificios y viviendas. Diseño de
-                        topográficos, armado y montaje de tableros eléctricos.
-                        Auditorías energéticas Mejoras de instalaciones.
-                    </p>
+                    <a href="#"
+                        ><i class="icon ion-md-aperture icon-big"></i>
+                        <h3>
+                            Aires Acondicionados
+                        </h3>
+                    </a>
                 </div>
             </div>
         </section>
@@ -499,5 +532,17 @@
                 </p>
             </div>
         </footer>
+
+        <script>
+            $(".hero-slider").slick({
+                slidesToShow: 1,
+                prevArrow: $(".themes-carousel-controls .prev"),
+                nextArrow: $(".themes-carousel-controls .next"),
+                autoplay: true,
+                dots: false,
+                autoplaySpeed: 7000,
+                fade: true
+            });
+        </script>
     </body>
 </html>

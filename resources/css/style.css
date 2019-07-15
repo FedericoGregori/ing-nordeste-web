@@ -18,6 +18,7 @@ body {
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility; /* Mejor render de las fuentes */
+    height: 100%;
 }
 
 .clearfix {
@@ -124,12 +125,11 @@ Header
 ***********************/
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url(img/hero.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    color: #9c2d21;
+
+    background: #fff;
+
+    border-bottom: 10px solid #9c2d21;
 }
 
 .hero-text-box {
@@ -141,10 +141,11 @@ header {
 }
 
 .logo {
-    height: 120px;
+    height: 80px;
     width: auto;
     float: left;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .hero-main-text {
@@ -164,7 +165,7 @@ header {
 }
 
 .main-nav li a {
-    color: #fff;
+    color: #9c2d21;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
@@ -172,7 +173,7 @@ header {
 
 .main-nav li a:link,
 .main-nav li a:visited {
-    color: #fff;
+    color: #9c2d21;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
@@ -184,6 +185,162 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #c0392b;
+}
+
+/**********************
+
+Header Slider
+
+***********************/
+
+.text-white {
+    color: #fff !important;
+}
+
+@-webkit-keyframes fadeInUpSD {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@keyframes fadeInUpSD {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+.fadeInUpSD {
+    -webkit-animation-name: fadeInUpSD;
+    animation-name: fadeInUpSD;
+}
+
+.hero-slide {
+    height: 100vh;
+    display: flex !important;
+    align-items: flex-end;
+    position: relative;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.hero-slide .container {
+    z-index: 1;
+    position: relative;
+}
+
+body > section.hero-slider.slick-initialized.slick-slider {
+    height: 80vh;
+    padding: 0 !important;
+}
+
+.hero-slider .slide-content {
+    width: 100%;
+    padding: 10px 20px 30px 0;
+    font-family: "Proxima-Nova", sans-serif !important;
+    opacity: 0;
+}
+
+.slick-slide {
+    height: 600px !important;
+    overflow: hidden;
+}
+
+.slick-active .slide-content {
+    animation-name: fadeInUpSD;
+    animation-duration: 1s;
+    opacity: 1;
+}
+.slide-content .h1 {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.slider-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.slider-overlay {
+    background: rgba(0, 0, 0, 0.9);
+}
+.slide-btn {
+    position: relative;
+    padding-left: 0;
+}
+.slide-btn:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-bottom: 3px solid #d2282e;
+    transition: width 0.3s ease-in-out;
+}
+
+.slide-btn:hover:after {
+    width: 90%;
+}
+
+.slider_1 {
+    background-image: url("img/hero-slider-1.jpg");
+    background-position: center center !important;
+}
+.slider_2 {
+    background-image: url("img/hero-slider-2.jpg") !important;
+    background-position: center center !important;
+}
+.slider_3 {
+    background-image: url("img/hero-slider-3.jpg") !important;
+    background-position: center center !important;
+}
+.slider_4 {
+    background-image: url("img/hero-slider-4.jpg") !important;
+    background-position: center center !important;
+}
+
+@media screen and (min-width: 768px) {
+    .slider-overlay {
+        display: none;
+    }
+
+    .hero-slide {
+        align-items: center;
+        min-height: 300px;
+        /*         max-height: 400px; */
+    }
+
+    .slide-content {
+        max-width: 450px;
+        padding: 10px 20px 10px 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px !important;
+    }
+
+    .slide-content .h1 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .slide-content {
+        max-width: 550px;
+        padding: 10px 20px 10px 0;
+    }
 }
 
 /**********************
@@ -233,6 +390,24 @@ input[type="submit"]:hover {
 
 /**********************
 
+Us/Nosotros
+
+***********************/
+
+.us-image img {
+    width: 100%;
+}
+
+.us-text p {
+    width: 100%;
+    font-size: 120%;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    text-indent: 60px;
+}
+
+/**********************
+
 Features/Servicios
 
 ***********************/
@@ -254,6 +429,27 @@ Features/Servicios
 .box p {
     font-size: 90%;
     line-height: 145%;
+}
+
+.section-features a {
+    color: #000;
+    text-decoration: none;
+}
+
+.section-features i {
+    text-align: center;
+}
+
+.section-features h3 {
+    border: 3px solid rgb(230, 115, 49);
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 100%;
+    text-align: center;
+}
+
+.section-features h3:last-of-type {
+    font-size: 80%;
 }
 
 /**********************
