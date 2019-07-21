@@ -94,11 +94,21 @@ h2:after {
 .icon-big {
     font-size: 350%;
     display: block;
-    color: #fff;
+    color: #9c2d21;
     margin-bottom: 10px;
 }
 
+.icon-big:hover {
+    color: #fff;
+}
+
 .box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.box-cities img {
     width: 100%;
     height: auto;
     margin-bottom: 15px;
@@ -227,7 +237,7 @@ Header Slider
 }
 
 .hero-slide {
-    height: 100vh;
+    height: 100vw;
     display: flex !important;
     align-items: flex-end;
     position: relative;
@@ -321,7 +331,7 @@ body > section.hero-slider.slick-initialized.slick-slider {
     .hero-slide {
         align-items: center;
         min-height: 300px;
-        /*         max-height: 400px; */
+        max-height: 80vh;
     }
 
     .slide-content {
@@ -429,31 +439,8 @@ Features/Servicios
 }
 
 .box {
+    height: 250px;
     padding: 1%;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#feccb1+0,f17432+86,ea5507+93,fb955e+100 */
-    background: #feccb1; /* Old browsers */
-    background: -moz-linear-gradient(
-        -45deg,
-        #feccb1 0%,
-        #f17432 86%,
-        #ea5507 93%,
-        #fb955e 100%
-    ); /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-        -45deg,
-        #feccb1 0%,
-        #f17432 86%,
-        #ea5507 93%,
-        #fb955e 100%
-    ); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(
-        135deg,
-        #feccb1 0%,
-        #f17432 86%,
-        #ea5507 93%,
-        #fb955e 100%
-    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', endColorstr='#fb955e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
     border-radius: 20px;
 

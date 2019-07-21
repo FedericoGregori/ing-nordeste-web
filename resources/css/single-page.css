@@ -1,45 +1,15 @@
-:root {
-    /* Set fade in duration */
-    --fade-time: 0.5s;
+.single-page-gallery {
+    margin: 2% 5%;
 }
 
-.container {
-    max-width: 760px;
-    margin: auto;
-    border: #fff solid 3px;
-    background: #fff;
+.single-page-gallery img {
+    height: 200px;
+    border-radius: 20px;
 }
 
-.main-img img,
-.imgs img {
-    width: 100%;
-}
-
-.imgs {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5px;
-}
-
-.imgs img {
-    cursor: pointer;
-}
-
-/* Fade in animation */
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn var(--fade-time) ease-in 1 forwards;
-}
-
-/* Media Queries */
-@media (max-width: 600px) {
-    .imgs {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.field-name-field-primary-image .field-item {
+    display: inline;
+    margin-right: 4px;
+    padding-right: 2px;
+    padding-left: 2px;
 }
