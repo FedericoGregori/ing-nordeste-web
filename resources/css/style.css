@@ -531,16 +531,26 @@ Sample Gallery/Fotos main page
 
 /**********************
 
-Proyectos
+Trabajos
 
 ***********************/
 
-.proyectos-title {
+.section-trabajos a {
+    text-decoration: none;
     color: #000;
 }
 
 .box-cities {
     background: #fff;
+    padding: 1%;
+    border-radius: 20px;
+    -webkit-box-shadow: 9px 10px 34px -7px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 9px 10px 34px -7px rgba(0, 0, 0, 0.57);
+    box-shadow: 9px 10px 34px -7px rgba(0, 0, 0, 0.57);
+}
+
+.box-cities:hover {
+    background: rgba(85, 85, 85, 0.212);
 }
 
 .box-cities img {
