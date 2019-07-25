@@ -98,9 +98,9 @@ h2:after {
     margin-bottom: 10px;
 }
 
-.icon-big:hover {
+/* .icon-big:hover {
     color: #fff;
-}
+} */
 
 .box img {
     width: 100%;
@@ -250,6 +250,10 @@ Header Slider
     position: relative;
 }
 
+.hero-slider {
+    padding: 0;
+}
+
 body > section.hero-slider.slick-initialized.slick-slider {
     height: 80vh;
     padding: 0 !important;
@@ -322,6 +326,14 @@ body > section.hero-slider.slick-initialized.slick-slider {
     background-image: url("img/hero-slider-4.jpg") !important;
     background-position: center center !important;
 }
+.slider_5 {
+    background-image: url("img/hero-slider-5.jpg") !important;
+    background-position: center center !important;
+}
+.slider_6 {
+    background-image: url("img/hero-slider-6.jpeg") !important;
+    background-position: center center !important;
+}
 
 @media screen and (min-width: 768px) {
     .slider-overlay {
@@ -351,6 +363,12 @@ body > section.hero-slider.slick-initialized.slick-slider {
         max-width: 550px;
         padding: 10px 20px 10px 0;
     }
+}
+
+.slider-container {
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 10px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 /**********************
@@ -448,12 +466,16 @@ Features/Servicios
     -moz-box-shadow: 9px 10px 34px -7px rgba(0, 0, 0, 0.57);
     box-shadow: 9px 10px 34px -7px rgba(0, 0, 0, 0.57);
 
-    transition: background 0.2s;
+    transition: transform 0.4s;
 }
 
 .box:hover {
-    color: #fff;
-    background: #e17055;
+    /* color: #000; */
+    transform: scale(1.04);
+
+    -webkit-box-shadow: inset 1px 0px 4px 8px rgba(50, 50, 50, 0.23);
+    -moz-box-shadow: inset 1px 0px 4px 8px rgba(50, 50, 50, 0.23);
+    box-shadow: inset 1px 0px 4px 8px rgba(50, 50, 50, 0.23);
     text-decoration: none;
 }
 
@@ -473,7 +495,7 @@ Features/Servicios
 }
 
 .section-features a:hover {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     transition: background-color 0.2s;
 }
