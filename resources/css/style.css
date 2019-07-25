@@ -466,7 +466,7 @@ Features/Servicios
     -moz-box-shadow: 9px 10px 34px -7px rgba(0, 0, 0, 0.57);
     box-shadow: 9px 10px 34px -7px rgba(0, 0, 0, 0.57);
 
-    transition: transform 0.4s;
+    transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .box:hover {
