@@ -21,3 +21,7 @@
 .section-list {
     margin: 1vh 7vw;
 }
+
+.page-selected {
+    border-bottom: 1px solid orangered;
+}
