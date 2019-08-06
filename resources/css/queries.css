@@ -7,6 +7,10 @@
         padding: 0 2%;
     }
 
+    .main-nav {
+        display: none;
+    }
+
     .us-image img {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
@@ -19,10 +23,6 @@
 
     .box {
         height: 165px;
-    }
-
-    .main-nav {
-        margin-top: -5px;
     }
 
     .slick-slide {
