@@ -566,10 +566,10 @@ Trabajos
 .box-cities {
     background: #fff;
     padding: 1%;
-    border-radius: 20px;
     -webkit-box-shadow: 9px 10px 34px -7px rgba(0, 0, 0, 0.57);
     -moz-box-shadow: 9px 10px 34px -7px rgba(0, 0, 0, 0.57);
     box-shadow: 9px 10px 34px -7px rgba(0, 0, 0, 0.57);
+    margin-bottom: 5% !important;
 }
 
 .box-cities:hover {
@@ -577,7 +577,6 @@ Trabajos
 }
 
 .box-cities img {
-    border-radius: 20px;
     margin-bottom: 40px;
 }
 
@@ -588,6 +587,7 @@ Trabajos
 
 .box-cities p {
     text-align: right;
+    padding: 3%;
 }
 
 /**********************
