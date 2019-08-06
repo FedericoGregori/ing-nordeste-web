@@ -348,9 +348,9 @@ body > section.hero-slider.slick-initialized.slick-slider {
 
     .slide-content {
         max-width: 450px;
-        padding: 10px 20px 10px 0;
+        /* padding: 10px 20px 10px 0;
         background: rgba(0, 0, 0, 0.9);
-        padding: 20px !important;
+        padding: 20px !important; */
     }
 
     .slide-content .h1 {
@@ -437,7 +437,7 @@ Us/Nosotros
 
 .us-text p {
     color: #000;
-    width: 100%;
+    width: 85%;
     font-size: 120%;
     line-height: 120%;
     margin-bottom: 20px;
