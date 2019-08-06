@@ -3,6 +3,10 @@
         margin: 3%;
     }
 
+    body {
+        font-size: 18px;
+    }
+
     .row {
         padding: 0 2%;
     }
@@ -11,6 +15,10 @@
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
+    }
+
+    .us-text p {
+        margin: auto;
     }
 
     .box {
