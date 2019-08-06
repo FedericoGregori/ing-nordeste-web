@@ -3,6 +3,10 @@
         margin: 3%;
     }
 
+    .row {
+        padding: 0 2%;
+    }
+
     .us-image img {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
