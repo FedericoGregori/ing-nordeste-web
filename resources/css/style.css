@@ -4,6 +4,12 @@ General
 
 ***********************/
 
+:root {
+    --primary-color: #55738de3; /* CSS Variable */
+    --secondary-color: #3498db;
+    --overlay-color: rgba(0, 0, 0, 0.7);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +20,7 @@ html,
 body {
     background-color: #fff;
     color: #555;
-    font-family: "Lato", "Arial", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility; /* Mejor render de las fuentes */
@@ -84,7 +90,7 @@ h3 {
 h2:after {
     display: block;
     height: 2px;
-    background-color: #c0392b;
+    background-color: var(--primary-color);
     content: " ";
     width: 100px;
     margin: 0 auto;
@@ -94,7 +100,7 @@ h2:after {
 .icon-big {
     font-size: 350%;
     display: block;
-    color: #9c2d21;
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 
@@ -135,11 +141,11 @@ Header
 ***********************/
 
 header {
-    color: #9c2d21;
+    color: var(--primary-color);
 
     background: #fff;
 
-    border-bottom: 10px solid #9c2d21;
+    border-bottom: 10px solid var(--primary-color);
 }
 
 .hero-text-box {
@@ -175,7 +181,7 @@ header {
 }
 
 .main-nav li a {
-    color: #9c2d21;
+    color: var(--primary-color);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
@@ -183,7 +189,7 @@ header {
 
 .main-nav li a:link,
 .main-nav li a:visited {
-    color: #9c2d21;
+    color: var(--primary-color);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
@@ -194,7 +200,36 @@ header {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid #c0392b;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.main-nav li .contact {
+    margin-left: 4px;
+}
+
+/* Sticky navbar */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    border-bottom: 3px solid #9c2d21;
+    box-shadow: 0 3px 2px rgba(139, 139, 139, 0.726);
+}
+
+.sticky .main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sticky .logo {
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 /**********************
@@ -366,6 +401,7 @@ body > section.hero-slider.slick-initialized.slick-slider {
 }
 
 .slider-container {
+    position: static;
     -webkit-box-shadow: 0px 10px 5px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 0px 10px 5px 0px rgba(50, 50, 50, 0.75);
     box-shadow: 0px 10px 5px 0px rgba(50, 50, 50, 0.75);
@@ -389,31 +425,32 @@ input[type="submit"] {
 
 .btn-full,
 input[type="submit"] {
-    background-color: #c0392b;
-    border: 1px solid #c0392b;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     color: #fff;
 }
 
 .btn-ghost {
-    border: 1px solid #c0392b;
+    border: 1px solid var(--primary-color);
     color: #fff;
 }
 
 .btn:hover,
 .btn:active,
 input[type="submit"]:hover {
-    background-color: #9c2d21;
+    background-color: var(--secondary-color);
+    cursor: pointer;
 }
 
 .btn-full:hover,
 .btn-full:active,
 input[type="submit"]:hover {
-    border: 1px solid #9c2d21;
+    border: 1px solid var(--secondary-color);
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solic #9c2d21;
+    border: 1px solic var(--secondary-color);
 }
 
 /**********************
@@ -472,11 +509,11 @@ Features/Servicios
 
 .box:hover {
     /* color: #000; */
-    transform: scale(1.04);
+    transform: translateY(-10px) scale(1.03);
 
-    -webkit-box-shadow: inset 1px 0px 4px 8px rgba(50, 50, 50, 0.23);
+    /* -webkit-box-shadow: inset 1px 0px 4px 8px rgba(50, 50, 50, 0.23);
     -moz-box-shadow: inset 1px 0px 4px 8px rgba(50, 50, 50, 0.23);
-    box-shadow: inset 1px 0px 4px 8px rgba(50, 50, 50, 0.23);
+    box-shadow: inset 1px 0px 4px 8px rgba(50, 50, 50, 0.23); */
     text-decoration: none;
 }
 
@@ -721,9 +758,16 @@ footer {
     transition: color 0.2s;
 }
 
+.footer-nav li {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 4px;
+}
+
 .footer-nav li a:hover,
 .footer-nav li a:active {
     color: rgb(255, 255, 255);
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--secondary-color);
 }
 
 .social-links li a:link,
@@ -783,4 +827,25 @@ Single Page
 
 .section-list {
     margin: 40px;
+}
+
+/**********************
+
+Animations
+
+***********************/
+
+.js--wp-2,
+.js--wp-3,
+.js--wp-4,
+.js--wp-5 {
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.js--wp-2 .animated,
+.js--wp-3 .animated,
+.js--wp-4 .animated,
+.js--wp-5 .animated {
+    opacity: 1;
 }
