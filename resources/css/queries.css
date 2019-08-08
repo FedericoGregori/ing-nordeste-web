@@ -11,6 +11,9 @@
         display: none;
     }
 
+    .header-slide {
+        margin-top: 1.4%;
+    }
     .us-image img {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
