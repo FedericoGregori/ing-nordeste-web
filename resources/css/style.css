@@ -104,10 +104,6 @@ h2:after {
     margin-bottom: 10px;
 }
 
-/* .icon-big:hover {
-    color: #fff;
-} */
-
 .box img {
     width: 100%;
     height: auto;
@@ -142,18 +138,12 @@ Header
 
 header {
     color: var(--primary-color);
-
     background: #fff;
-
     border-bottom: 10px solid var(--primary-color);
-}
 
-.hero-text-box {
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
 .logo {
@@ -214,7 +204,8 @@ header {
     top: 0;
     width: 100%;
     z-index: 9999;
-    border-bottom: 3px solid #9c2d21;
+    border-bottom: 3px solid var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 3px 2px rgba(139, 139, 139, 0.726);
 }
 
@@ -273,6 +264,7 @@ Header Slider
 
 .hero-slide {
     height: 100vw;
+    margin-top: 1.2%;
     display: flex !important;
     align-items: flex-end;
     position: relative;

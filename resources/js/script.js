@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    /* $(".js--section-features").waypoint(
+    /* Sticky navbar */
+    $(".js--section-features").waypoint(
         function(direction) {
             if (direction == "down") {
                 $("header").addClass("sticky");
@@ -8,9 +9,9 @@ $(document).ready(function() {
             }
         },
         {
-            offset: "25%;"
+            offset: "10%;"
         }
-    ); */
+    );
 
     /* Navigation scroll */
     $(function() {
@@ -78,6 +79,15 @@ $(document).ready(function() {
     $(".js--wp-5").waypoint(
         function(direction) {
             $(".js--wp-5").addClass("animated fadeInLeft");
+        },
+        {
+            offset: "70%"
+        }
+    );
+
+    $(".js--wp-6").waypoint(
+        function(direction) {
+            $(".js--wp-6").addClass("animated fadeInRight");
         },
         {
             offset: "70%"
