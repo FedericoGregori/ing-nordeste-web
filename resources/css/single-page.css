@@ -22,6 +22,10 @@
     margin: 1vh 7vw;
 }
 
+.section-title {
+    margin-top: 10%;
+}
+
 .page-selected {
     border-bottom: 1px solid orangered;
 }
